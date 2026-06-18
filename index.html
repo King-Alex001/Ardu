@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ardu Classroom Guide</title>
+  <meta name="description" content="A simple, friendly website for students building an Arduino blinker and an optional sonar project.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="backdrop backdrop-one"></div>
+  <div class="backdrop backdrop-two"></div>
+
+  <main class="shell">
+    <section class="page-intro card">
+      <p class="eyebrow">Ardu • course project</p>
+      <h1>Choose a project widget to get started.</h1>
+      <p class="lead">
+        Pick one of the two projects below to open its page and follow the build from there.
+      </p>
+    </section>
+
+    <section id="projects" class="widget-grid">
+      <a class="card project-card widget-card project-link" href="blinker.html">
+        <div class="widget-head">
+          <p class="section-kicker">Project 01</p>
+          <span class="widget-badge">Starter</span>
+        </div>
+        <h2>LED blinker</h2>
+        <p>
+          The first milestone is a simple LED that turns on and off every second.
+          This teaches pin setup, digital output, and the basic upload loop.
+        </p>
+        <ul class="checklist">
+          <li>Arduino board</li>
+          <li>LED</li>
+          <li>220Ω resistor</li>
+          <li>Breadboard and jumper wires</li>
+        </ul>
+        <span class="button button-primary widget-action">Open project</span>
+      </a>
+
+      <a class="card project-card widget-card project-link" href="sonar.html">
+        <div class="widget-head">
+          <p class="section-kicker">Project 02</p>
+          <span class="widget-badge">Optional</span>
+        </div>
+        <h2>Sonar</h2>
+        <p>
+          If you want a second challenge, add an HC-SR04-style ultrasonic sensor
+          and display the measured distance in the serial monitor.
+        </p>
+        <ul class="checklist">
+          <li>Ultrasonic distance sensor</li>
+          <li>Extra jumper wires</li>
+          <li>Serial monitor open in the IDE</li>
+          <li>Careful power and ground wiring</li>
+        </ul>
+        <span class="button button-primary widget-action">Open project</span>
+      </a>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LED Blinker | Ardu</title>
+  <meta name="description" content="Step-by-step project page for the Arduino LED blinker build.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="backdrop backdrop-one"></div>
+  <div class="backdrop backdrop-two"></div>
+
+  <main class="shell project-page">
+    <section class="card project-hero">
+      <p class="eyebrow">Project 01</p>
+      <h1>LED blinker</h1>
+      <p class="lead">
+        This project gets an LED blinking on and off so students can learn basic output, wiring, and upload flow.
+      </p>
+      <a class="button button-secondary" href="index.html">Back to projects</a>
+    </section>
+
+    <section class="project-layout">
+      <article class="card project-details">
+        <p class="section-kicker">What you need</p>
+        <ul class="checklist">
+          <li>Arduino board</li>
+          <li>LED</li>
+          <li>220Ω resistor</li>
+          <li>Breadboard and jumper wires</li>
+        </ul>
+      </article>
+
+      <article class="card project-details">
+        <p class="section-kicker">How it works</p>
+        <ol class="numbered-list">
+          <li>Wire the LED and resistor to a digital pin and ground.</li>
+          <li>Upload a sketch that turns the pin on and off.</li>
+          <li>Change the delay to see the blink rate change.</li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="card code-section project-code">
+      <p class="section-kicker">Starter sketch</p>
+      <pre class="code-block visible"><code>#define LED_PIN 13
+
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_PIN, HIGH);
+  delay(1000);
+  digitalWrite(LED_PIN, LOW);
+  delay(1000);
+}</code></pre>
+    </section>
+  </main>
+</body>
+</html>

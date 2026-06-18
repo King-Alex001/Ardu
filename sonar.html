@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sonar | Ardu</title>
+  <meta name="description" content="Step-by-step project page for the Arduino sonar build.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="backdrop backdrop-one"></div>
+  <div class="backdrop backdrop-two"></div>
+
+  <main class="shell project-page">
+    <section class="card project-hero">
+      <p class="eyebrow">Project 02</p>
+      <h1>Sonar</h1>
+      <p class="lead">
+        This optional project uses an ultrasonic sensor to measure distance and show the result in the serial monitor.
+      </p>
+      <a class="button button-secondary" href="index.html">Back to projects</a>
+    </section>
+
+    <section class="project-layout">
+      <article class="card project-details">
+        <p class="section-kicker">What you need</p>
+        <ul class="checklist">
+          <li>Ultrasonic distance sensor</li>
+          <li>Arduino board</li>
+          <li>Jumper wires</li>
+          <li>Serial monitor in the IDE</li>
+        </ul>
+      </article>
+
+      <article class="card project-details">
+        <p class="section-kicker">How it works</p>
+        <ol class="numbered-list">
+          <li>Wire the trigger and echo pins to the board.</li>
+          <li>Send a pulse and read the return time.</li>
+          <li>Convert the time into distance and print it out.</li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="card code-section project-code">
+      <p class="section-kicker">Starter sketch</p>
+      <pre class="code-block visible"><code>const int trigPin = 9;
+const int echoPin = 10;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+}
+
+void loop() {
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  long duration = pulseIn(echoPin, HIGH);
+  float distanceCm = duration * 0.0343 / 2.0;
+
+  Serial.print("Distance: ");
+  Serial.print(distanceCm);
+  Serial.println(" cm");
+
+  delay(250);
+}</code></pre>
+    </section>
+  </main>
+</body>
+</html>
